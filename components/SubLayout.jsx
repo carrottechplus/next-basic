@@ -18,7 +18,7 @@ function SubLayout(props) {
 				<Header />
 				<div className={styles.subLayout}>
 					<h1 className={orbitron.className}>{props.name}</h1>
-					<p className={notoSans.className}>레이아웃 페이지 입니당</p>
+					<p className={notoSans.className}>LAYOUT TITLE</p>
 					{props.children}
 				</div>
 			</section>
