@@ -1,6 +1,6 @@
 import SubLayout from '@/components/SubLayout';
 
-function isr() {
+function Isr() {
 	return (
 		<SubLayout name={'ISR'}>
 			<p>ISR방식</p>
@@ -8,4 +8,4 @@ function isr() {
 	);
 }
 
-export default isr;
+export default Isr;

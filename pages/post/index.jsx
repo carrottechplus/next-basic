@@ -1,6 +1,6 @@
 import SubLayout from '@/components/SubLayout';
 
-function post() {
+function Post() {
 	return (
 		<SubLayout name={'POST'}>
 			<p>POST</p>
@@ -8,4 +8,4 @@ function post() {
 	);
 }
 
-export default post;
+export default Post;

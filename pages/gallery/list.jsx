@@ -1,4 +1,4 @@
-function list() {
+function List() {
 	return (
 		<div>
 			<h2>Gallery 목록</h2>
@@ -6,4 +6,4 @@ function list() {
 	);
 }
 
-export default list;
+export default List;

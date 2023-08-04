@@ -1,4 +1,4 @@
-function index() {
+function Index() {
 	return (
 		<div>
 			<h1>Gallery</h1>
@@ -6,4 +6,4 @@ function index() {
 	);
 }
 
-export default index;
+export default Index;

@@ -1,7 +1,7 @@
 import SubLayout from '@/components/SubLayout';
 import { useRouter } from 'next/router';
 
-function detail() {
+function Detail() {
 	const router = useRouter();
 	const { id } = router.query;
 	console.log(id);
@@ -13,4 +13,4 @@ function detail() {
 	);
 }
 
-export default detail;
+export default Detail;

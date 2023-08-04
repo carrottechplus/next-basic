@@ -1,6 +1,6 @@
 import SubLayout from '@/components/SubLayout';
 
-function ssr() {
+function Ssr() {
 	return (
 		<SubLayout name={'SSR'}>
 			<p>SSR 방식</p>
@@ -8,4 +8,4 @@ function ssr() {
 	);
 }
 
-export default ssr;
+export default Ssr;

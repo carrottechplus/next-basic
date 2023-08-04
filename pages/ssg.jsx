@@ -1,6 +1,6 @@
 import SubLayout from '@/components/SubLayout';
 
-function ssg() {
+function Ssg() {
 	return (
 		<SubLayout name={'SSG'}>
 			<p>SSG 방식</p>
@@ -8,4 +8,4 @@ function ssg() {
 	);
 }
 
-export default ssg;
+export default Ssg;
