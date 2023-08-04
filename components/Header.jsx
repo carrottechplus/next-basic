@@ -9,7 +9,9 @@ function Header() {
 	return (
 		<header id={styles.header}>
 			<h1>
-				<Link href='/'>Logo</Link>
+				<Link href='/' className={currentPath === '/' ? styles.on : ''}>
+					Logo
+				</Link>
 			</h1>
 
 			<ul id={styles.gnb}>
