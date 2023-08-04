@@ -7,7 +7,7 @@ function detail() {
 	console.log(id);
 
 	return (
-		<SubLayout>
+		<SubLayout name={'POST'}>
 			<p>{id}번 POST detail</p>
 		</SubLayout>
 	);

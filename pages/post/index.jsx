@@ -2,7 +2,7 @@ import SubLayout from '@/components/SubLayout';
 
 function post() {
 	return (
-		<SubLayout>
+		<SubLayout name={'POST'}>
 			<p>POST</p>
 		</SubLayout>
 	);
