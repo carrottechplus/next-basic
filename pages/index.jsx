@@ -17,7 +17,15 @@ export default function Home() {
 			<main>
 				<h1>MAIN</h1>
 				<p className={styles.pic}>
-					<Image src={pic} alt='pic' fill quality={70} />
+					<Image src={pic} alt='pic' fill quality={100} placeholder='blur' />
+				</p>
+				<p className={styles.pic}>
+					<Image
+						src='https://images.unsplash.com/photo-1659132814891-ef346422b339?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3126&q=80'
+						alt='pic'
+						fill
+						quality={100}
+					/>
 				</p>
 			</main>
 		</>
