@@ -1,5 +1,12 @@
 import Head from 'next/head';
 import Header from './Header';
+import styles from './SubLayout.module.scss';
+import { Orbitron, Noto_Sans_KR } from 'next/font/google';
+import clsx from 'clsx';
+
+const orbitron = Orbitron({ subsets: ['latin'], weight: ['400', '500'], preload: true, variable: '--orbitron' });
+const notoSans = Noto_Sans_KR({ subsets: ['latin'], weight: ['300'], preload: true, variable: '--notoSans' });
+console.log(notoSans);
 
 function SubLayout(props) {
 	return (
@@ -9,8 +16,11 @@ function SubLayout(props) {
 			</Head>
 			<section>
 				<Header />
-				<h1>{props.name}</h1>
-				{props.children}
+				<div className={styles.subLayout}>
+					<h1 className={orbitron.className}>{props.name}</h1>
+					<p className={notoSans.className}>레이아웃 페이지 입니당</p>
+					{props.children}
+				</div>
 			</section>
 		</>
 	);
