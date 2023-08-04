@@ -31,6 +31,11 @@ function Header() {
 					</Link>
 				</li>
 				<li>
+					<Link href='/csr' className={currentPath === '/csr' ? styles.on : ''}>
+						CSR
+					</Link>
+				</li>
+				<li>
 					<Link href='/post' className={currentPath === '/post' ? styles.on : ''}>
 						POST
 					</Link>
