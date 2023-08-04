@@ -1,10 +1,19 @@
 import SubLayout from '@/components/SubLayout';
+import data from '@/public/members.json';
 
 function Ssg(props) {
 	return (
 		<SubLayout name={'SSG'}>
 			<p>SSG 방식</p>
 			<h1>{props.now}</h1>
+			{props.members.map((member, idx) => {
+				return (
+					<article key={idx}>
+						<h2>{member.name}</h2>
+						<p>{member.position}</p>
+					</article>
+				);
+			})}
 		</SubLayout>
 	);
 }
@@ -12,7 +21,7 @@ function Ssg(props) {
 export async function getStaticProps() {
 	console.log('ssg');
 	return {
-		props: { now: performance.now() },
+		props: { now: performance.now(), members: data.members },
 	};
 }
 
