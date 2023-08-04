@@ -3,7 +3,9 @@ import { useEffect, useState } from 'react';
 
 function Csr() {
 	console.log('csr');
+
 	const [Now, setNow] = useState('');
+
 	useEffect(() => {
 		setNow(performance.now());
 	}, []);

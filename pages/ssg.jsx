@@ -9,7 +9,6 @@ function Ssg(props) {
 	);
 }
 
-//서버단에서
 export async function getStaticProps() {
 	console.log('ssg');
 	return {
