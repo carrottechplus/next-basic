@@ -5,33 +5,11 @@ import Image from 'next/image';
 import pic from '@/public/img/img.jpg';
 import { useEffect } from 'react';
 import { FaApple } from 'react-icons/fa6';
-//npm i react-icons 설치후
-//https://react-icons.github.io/react-icons에서 활용할 아이콘 컴포넌트 import문과 아이콘명 확인
+//npm i react-icons 설치후 https://react-icons.github.io/react-icons에서 활용할 아이콘 컴포넌트 import문과 아이콘명 확인
 import { IconContext } from 'react-icons';
 import { FcAbout } from 'react-icons/fc';
 
-//api 라우팅 (서버요청 처리를 위해서는 express라는 프레임웍을 활용)
-//next에서는 api폴더 안쪽에 서버쪽 요청 및 응답에대한 라우팅 설정가능
-//api폴더 안쪽의 파일명이 라우터 요청명으로 자동설정됨 /api/hello
-
 export default function Home() {
-	//서버쪽에서 프리렌더된 페이지를 가지고온 이후에
-	//클라이언트쪽에서 다시 서버쪽 요청가능
-	//next자체적으로 서버쪽 요청, 응답처리
-	useEffect(() => {
-		//api폴더 안쪽의 hello.js에 서버요청처리
-		//fetch함수의 두번째 인수로 옵션값을 설정하지 않으면 Get방식으로 전송요청
-		// {method:전송방식, body:전달값(문자)}
-		fetch('/api/hello', {
-			method: 'POST',
-			body: 'abc',
-		})
-			.then((res) => res.json())
-			.then((json) => console.log(json));
-		fetch('/api/hello')
-			.then((res) => res.json())
-			.then((json) => console.log(json));
-	}, []);
 	return (
 		<>
 			<Head>
