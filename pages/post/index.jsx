@@ -13,7 +13,7 @@ function Post() {
 		axios
 			.post('/api/post', item)
 			.then((res) => {
-				console.log(res);
+				console.log('글 저장', res);
 				alert('글이 저장되었습니다.');
 			})
 			.catch((err) => {
@@ -25,7 +25,7 @@ function Post() {
 	useEffect(() => {
 		axios
 			.get('/api/post')
-			.then((json) => console.log(json))
+			.then((json) => console.log('get', json))
 			.catch((err) => console.log(err));
 	}, []);
 
