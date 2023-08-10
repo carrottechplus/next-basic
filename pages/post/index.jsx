@@ -1,6 +1,6 @@
 import SubLayout from '@/components/SubLayout';
 import axios from 'axios';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Post() {
 	const [Ttl, setTtl] = useState('');
@@ -8,10 +8,7 @@ function Post() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		const item = {
-			title: TTl,
-			content: Con,
-		};
+		const item = { title: Ttl, content: Con };
 
 		axios
 			.post('/api/post', item)
@@ -24,6 +21,13 @@ function Post() {
 				alert('글이 저장되지 않았습니다.');
 			});
 	};
+
+	useEffect(() => {
+		axios
+			.get('/api/post')
+			.then((json) => console.log(json))
+			.catch((err) => console.log(err));
+	}, []);
 
 	return (
 		<SubLayout name={'POST'}>
