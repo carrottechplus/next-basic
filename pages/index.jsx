@@ -17,7 +17,7 @@ export default function Home() {
 	useEffect(() => {
 		// 시작 페이지 접속 시 firebase로 현재 로그인 상태값이 변경되면
 		firebase.auth().onAuthStateChanged((userInfo) => {
-			console.log('userInfo', userInfo.multiFactor.user);
+			console.log('userInfo', userInfo);
 
 			// 해당 값이 비어있을 때 = 비로그인, 전역 state값을 비움 처리
 			if (userInfo === null) setLoginInfo({ displayName: '', uid: '' });
