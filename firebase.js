@@ -2,7 +2,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 
 const firebaseConfig = {
-	apiKey: 'AIzaSyCXcH6FNwbKYMKkoXVZKNHH430WcVQo3Uo',
+	apiKey: process.env.NEXT_PUBLIC_FIREBASE_API,
 	authDomain: 'react-study-c0bec.firebaseapp.com',
 	projectId: 'react-study-c0bec',
 	storageBucket: 'react-study-c0bec.appspot.com',
