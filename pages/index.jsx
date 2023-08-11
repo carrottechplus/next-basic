@@ -9,10 +9,22 @@ import { FaApple } from 'react-icons/fa6';
 import { IconContext } from 'react-icons';
 import { FcAbout } from 'react-icons/fc';
 import { useGlobalData } from '@/hooks/useGlobalContext';
+import firebase from '@/firebase';
 
 export default function Home() {
-	const data = useGlobalData();
-	console.log(data);
+	const { setLoginInfo } = useGlobalData();
+
+	useEffect(() => {
+		// 시작 페이지 접속 시 firebase로 현재 로그인 상태값이 변경되면
+		firebase.auth().onAuthStateChanged((userInfo) => {
+			console.log(userInfo);
+
+			// 해당 값이 비어있을 때 = 비로그인, 전역 state값을 비움 처리
+			if (userInfo === null) setLoginInfo({ displayName: '', uid: '' });
+			// 값이 있을 때 = 로그인, firebase로 받은 유저 정보값을 전역 state에 덮어 씀.
+			else setLoginInfo(userInfo.multiFactor.user);
+		});
+	}, [setLoginInfo]);
 
 	return (
 		<>
