@@ -12,13 +12,13 @@ function SubLayout(props) {
 	return (
 		<>
 			<Head>
-				<title>{props.name}</title>
+				<title>{props.name || ''}</title>
 			</Head>
 			<section>
 				<Header />
-				<div className={styles.subLayout}>
-					<h1 className={orbitron.className}>{props.name}</h1>
-					<p className={notoSans.className}>LAYOUT TITLE</p>
+				<div className={styles && styles.subLayout}>
+					<h1 className={orbitron && orbitron.className}>{props.name || ''}</h1>
+					<p className={notoSans && notoSans.className}>LAYOUT TITLE</p>
 					{props.children}
 				</div>
 			</section>
