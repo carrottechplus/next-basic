@@ -19,7 +19,6 @@ function Ssg(props) {
 }
 
 export async function getStaticProps() {
-	console.log('ssg');
 	return {
 		props: { now: performance.now(), members: data.members },
 	};

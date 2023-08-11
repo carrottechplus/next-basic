@@ -1,3 +1,4 @@
+import Login from '@/components/Login';
 import SubLayout from '@/components/SubLayout';
 import { useGlobalData } from '@/hooks/useGlobalContext';
 import axios from 'axios';
@@ -5,7 +6,9 @@ import { useEffect, useState } from 'react';
 
 function Post() {
 	const { LoginInfo } = useGlobalData();
-	console.log(LoginInfo); // {displayName: '', uid: ''}
+	// console.log(LoginInfo); > {displayName: '', uid: ''}
+	// console.log(setLoginInfo);
+
 	const [Ttl, setTtl] = useState('');
 	const [Con, setCon] = useState('');
 
@@ -34,10 +37,12 @@ function Post() {
 
 	return (
 		<SubLayout name={'POST'}>
+			<Login />
 			<p>POST INTRO</p>
 			<div className='inputBox'>
 				<form onSubmit={handleSubmit}>
 					<input type='text' placeholder='제목을 입력하세요.' value={Ttl} onChange={(e) => setTtl(e.target.value)} />
+					<br />
 					<textarea
 						cols='30'
 						rows='3'

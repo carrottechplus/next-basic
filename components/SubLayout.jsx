@@ -6,7 +6,6 @@ import clsx from 'clsx';
 
 const orbitron = Orbitron({ subsets: ['latin'], weight: ['400', '500'], preload: true, variable: '--orbitron' });
 const notoSans = Noto_Sans_KR({ subsets: ['latin'], weight: ['300'], preload: true, variable: '--notoSans' });
-console.log(notoSans);
 
 function SubLayout(props) {
 	return (

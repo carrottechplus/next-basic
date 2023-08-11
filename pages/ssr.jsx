@@ -10,7 +10,6 @@ function Ssr(props) {
 }
 
 export async function getServerSideProps() {
-	console.log('ssr');
 	return {
 		props: { now: performance.now() },
 	};

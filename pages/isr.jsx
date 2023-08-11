@@ -10,8 +10,6 @@ function Isr(props) {
 }
 
 export async function getStaticProps() {
-	console.log('isr');
-
 	return {
 		props: { now: performance.now() },
 		revalidate: 5,
