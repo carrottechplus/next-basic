@@ -37,6 +37,15 @@ export default function Home() {
 			<Header />
 			<main className={styles.main}>
 				<h1>MAIN1</h1>
+				<button
+					type='button'
+					onClick={() => {
+						firebase.auth().signOut();
+						alert('로그아웃 되었습니다.');
+					}}
+				>
+					LOGOUT
+				</button>
 				{/* IconContext.Provider컴포넌트 임포트후 웹폰트 아이콘 활용한 부모요소에 wrapping해주면 해당 컴포넌트 안쪽에서는 context api를 이용해서 동일한 스타일을 전역으로 활용 가능 */}
 				{/* <IconContext.Provider value={{ color: 'blue', className: 'global-class-name' }}> */}
 				{/* 직접적으로 웹폰트아이콘에 커스텀 클래스명, 사이즈, 컬러값 지정가능 */}

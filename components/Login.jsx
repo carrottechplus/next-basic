@@ -33,6 +33,7 @@ function Login() {
 				onChange={(e) => setEmail(e.target.value)}
 				placeholder='이메일 주소를 입력하세요.'
 			/>
+			<br />
 			<input
 				type='password'
 				value={Pwd}
