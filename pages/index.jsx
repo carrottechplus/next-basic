@@ -8,8 +8,12 @@ import { FaApple } from 'react-icons/fa6';
 //npm i react-icons 설치후 https://react-icons.github.io/react-icons에서 활용할 아이콘 컴포넌트 import문과 아이콘명 확인
 import { IconContext } from 'react-icons';
 import { FcAbout } from 'react-icons/fc';
+import { useGlobalData } from '@/hooks/useGlobalContext';
 
 export default function Home() {
+	const data = useGlobalData();
+	console.log(data);
+
 	return (
 		<>
 			<Head>

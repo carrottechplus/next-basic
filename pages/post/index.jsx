@@ -1,8 +1,11 @@
 import SubLayout from '@/components/SubLayout';
+import { useGlobalData } from '@/hooks/useGlobalContext';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 function Post() {
+	const { LoginInfo } = useGlobalData();
+	console.log(LoginInfo); // {displayName: '', uid: ''}
 	const [Ttl, setTtl] = useState('');
 	const [Con, setCon] = useState('');
 
